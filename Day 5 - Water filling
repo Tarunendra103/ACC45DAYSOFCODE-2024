@@ -1,0 +1,13 @@
+T = int(input())  # Number of test cases
+
+for _ in range(T):
+    B1, B2, B3 = map(int, input().split())  # Input for each test case
+
+    # Count the number of empty bottles
+    empty_bottles = 3 - (B1 + B2 + B3)
+
+    # Check if at least two bottles are empty
+    if empty_bottles >= 2:
+        print("Water filling time")
+    else:
+        print("Not now")

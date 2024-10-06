@@ -1,0 +1,13 @@
+T = int(input())
+
+# Loop through each test case
+for _ in range(T):
+    # Read X and Y
+    X, Y = map(int, input().split())
+    
+    
+    if X >= Y:
+        print(0)
+    else:
+        
+        print((Y // X) - 1)

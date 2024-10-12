@@ -1,0 +1,10 @@
+import math
+
+def min_bags_needed(N: int, K: int, M: int) -> int:
+    max_candies_per_bag = K * M
+    return math.ceil(N / max_candies_per_bag)
+
+T = int(input())
+for _ in range(T):
+    N, K, M = map(int, input().split())
+    print(min_bags_needed(N, K, M))

@@ -1,0 +1,7 @@
+def notebooks_from_pulp(N: int) -> int:
+    return N * 10
+
+T = int(input())
+for _ in range(T):
+    N = int(input())
+    print(notebooks_from_pulp(N))

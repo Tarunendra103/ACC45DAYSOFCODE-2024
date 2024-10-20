@@ -1,0 +1,13 @@
+import math
+
+# Function to calculate total time
+def calculate_total_time(N, A, B):
+    rounds = int(math.log2(N))  # Number of rounds
+    total_time = A * rounds + B * (rounds - 1)
+    return total_time
+
+# Input
+T = int(input())  # Number of test cases
+for _ in range(T):
+    N, A, B = map(int, input().split())
+    print(calculate_total_time(N, A, B))

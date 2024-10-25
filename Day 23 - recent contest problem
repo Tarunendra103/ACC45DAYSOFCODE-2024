@@ -1,0 +1,27 @@
+def count_problems_in_contests():
+    import sys
+    input = sys.stdin.read
+    data = input().strip().splitlines()
+
+    T = int(data[0])
+    index = 1
+    results = []
+
+    for _ in range(T):
+        N = int(data[index])
+        contest_codes = data[index + 1].split()
+        
+        count_start38 = 0
+        count_ltime108 = 0
+        
+        for code in contest_codes:
+            if code == "START38":
+                count_start38 += 1
+            elif code == "LTIME108":
+                count_ltime108 += 1
+        
+        results.append(f"{count_start38} {count_ltime108}")
+        index += 2
+
+    print("\n".join(results))
+

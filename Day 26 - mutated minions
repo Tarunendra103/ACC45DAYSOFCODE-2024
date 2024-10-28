@@ -1,0 +1,5 @@
+for _ in range(int(input())):
+    N, K = map(int, input().split())
+    initial_values = list(map(int, input().split()))
+    count = sum((value + K) % 7 == 0 for value in initial_values)
+    print(count)

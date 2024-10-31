@@ -1,0 +1,21 @@
+def determine_serve(T, scores):
+    results = []
+    for P, Q in scores:
+        total_points = P + Q
+        serve_group = total_points // 2
+        if serve_group % 2 == 0:
+            results.append("Alice")
+        else:
+            results.append("Bob")
+    return results
+
+# Input reading
+T = int(input())
+scores = [tuple(map(int, input().split())) for _ in range(T)]
+
+# Getting the results
+results = determine_serve(T, scores)
+
+# Output results
+for result in results:
+    print(result)

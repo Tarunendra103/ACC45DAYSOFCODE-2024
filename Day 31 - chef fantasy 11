@@ -1,0 +1,16 @@
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read the number of players Chef is considering
+    N = int(input())
+    
+    # Calculate the number of ways to choose captain and vice-captain
+    if N >= 2:
+        total_choices = N * (N - 1)
+    else:
+        total_choices = 0  # If N is less than 2, no valid choices
+    
+    # Output the result for the current test case
+    print(total_choices)

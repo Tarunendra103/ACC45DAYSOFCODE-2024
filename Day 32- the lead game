@@ -1,0 +1,32 @@
+def find_winner_and_lead(n, scores):
+    player1_score = 0
+    player2_score = 0
+    max_lead = 0
+    winner = 0
+
+    for i in range(n):
+        player1_score += scores[i][0]
+        player2_score += scores[i][1]
+
+        if player1_score > player2_score:
+            lead = player1_score - player2_score
+            if lead > max_lead:
+                max_lead = lead
+                winner = 1
+        else:
+            lead = player2_score - player1_score
+            if lead > max_lead:
+                max_lead = lead
+                winner = 2
+
+    return winner, max_lead
+
+# Input handling
+n = int(input())
+scores = [tuple(map(int, input().split())) for _ in range(n)]
+
+# Find the winner and lead
+winner, max_lead = find_winner_and_lead(n, scores)
+
+# Output the result
+print(winner, max_lead)

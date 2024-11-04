@@ -1,0 +1,12 @@
+# Read number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read the number of bits
+    N = int(input())
+    
+    # Check if N is a positive multiple of 4
+    if N > 0 and N % 4 == 0:
+        print("Good")
+    else:
+        print("Not Good")

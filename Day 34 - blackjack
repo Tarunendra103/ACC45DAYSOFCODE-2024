@@ -1,0 +1,10 @@
+def solve():
+    T = int(input())  # Number of test cases
+    for _ in range(T):
+        A, B = map(int, input().split())  # Read the two numbers
+        C = 21 - (A + B)  # Calculate the third number to make the sum 21
+        if 1 <= C <= 10:
+            print(C)  # If C is valid, print it
+        else:
+            print(-1)  # Otherwise, print -1
+

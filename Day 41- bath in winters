@@ -1,0 +1,17 @@
+def max_people(T, test_cases):
+    results = []
+    for i in range(T):
+        X, Y = test_cases[i]
+        water_per_person = 2 * Y
+        max_people = X // water_per_person
+        results.append(max_people)
+    
+    return results
+
+T = int(input())
+test_cases = [tuple(map(int, input().split())) for _ in range(T)]
+
+results = max_people(T, test_cases)
+
+for result in results:
+    print(result)

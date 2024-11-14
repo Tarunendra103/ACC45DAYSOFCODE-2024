@@ -1,0 +1,22 @@
+def check_pass_fail(T, test_cases):
+    results = []
+    for i in range(T):
+        N, X, P = test_cases[i]
+        score = 4 * X - N
+        if score >= P:
+            results.append("PASS")
+        else:
+            results.append("FAIL")
+    return results
+
+T = int(input())
+test_cases = []
+
+for _ in range(T):
+    N, X, P = map(int, input().split())
+    test_cases.append((N, X, P))
+
+results = check_pass_fail(T, test_cases)
+
+for result in results:
+    print(result)

@@ -1,0 +1,12 @@
+def calculate_total_duration(N, A, B):
+    odd_count = (N + 1) // 2
+    even_count = N // 2
+    total_duration = odd_count * B + even_count * A
+    return total_duration
+
+T = int(input())
+
+for _ in range(T):
+    N, A, B = map(int, input().split())
+    result = calculate_total_duration(N, A, B)
+    print(result)

@@ -1,0 +1,10 @@
+def min_coins(N):
+    groups_of_5 = N // 5
+    remaining_gifts = N % 5
+    return groups_of_5 * 4 + remaining_gifts
+
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+    print(min_coins(N))

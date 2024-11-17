@@ -1,0 +1,10 @@
+import math
+
+def solve():
+    T = int(input())
+    for _ in range(T):
+        X, Y, R = map(int, input().split())
+        extra_sticks = R // 30
+        total_sticks = X + extra_sticks
+        plates = math.ceil(total_sticks / Y)
+        print(plates)
